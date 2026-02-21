@@ -3,13 +3,14 @@
 
 #include <iostream>
 #include "cadmium/modeling/devs/atomic.hpp"
+#include "../data_structures/constants.hpp"
+
 
 using namespace cadmium;
-enum class LightColor {RED, YELLOW, GREEN};
 
 struct TrafficLightState {
     LightColor color;
-
+    double sigma;
     explicit TrafficLightState()
     : color(GREEN), sigma(0.0) {}
 };
@@ -34,14 +35,14 @@ public:
 
     void internalTransition(TrafficLightState& state) const override {
         if (state.color == GREEN) {
-            state.color = RED;
-            state.sigma = 15.0; 
-        } else if (state.color == RED) {
             state.color = YELLOW;
+            state.sigma = 2.0; 
+        } else if (state.color == YELLOW) {
+            state.color = RED;
             state.sigma = 5.0;
         } else{
             state.color = GREEN;
-            state.sigma = 10.0;
+            state.sigma = 7.0;
         }
 
     }
