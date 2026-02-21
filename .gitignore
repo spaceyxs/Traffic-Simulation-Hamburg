@@ -1,0 +1,15 @@
+# Visual Studio build folders
+out/
+build/
+.vs/
+
+# CMake temporary files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+
+# Compiled binaries
+*.exe
+*.obj
+*.pdb
