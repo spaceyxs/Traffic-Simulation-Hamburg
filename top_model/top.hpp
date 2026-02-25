@@ -13,10 +13,10 @@ struct TopCoupled : public Coupled {
     TopCoupled(const std::string& id, double lambda) : Coupled(id) {
         
         auto carGen = addComponent<CarGenerator>("car_gen", lambda);
-        auto layer1 = addComponent<IntersectionCoupled>("inter_coupled");
+        auto inter_coupled = addComponent<IntersectionCoupled>("inter_coupled");
         topOut = addOutPort<Cars>("top_out");
-        addCoupling(carGen->carExit, layer1->nodeIn);
-        addCoupling(layer1->nodeOut, topOut);
+        addCoupling(carGen->carExit, inter_coupled->carIn);
+        addCoupling(inter_coupled->carOut, topOut);
     }
 };
 

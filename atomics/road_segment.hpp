@@ -67,13 +67,7 @@ public:
             state.CarsOnRoad.pop_front(); //remove vechile exiting road
         }
     
-        /* 
-            loop 1 [10, 20, 30]
-            [10, 10, 30] -> for first car we wait for 10 sec.
-            loop 2 [10, 10, 30]
-            [10, 10, 20] -> also for last car 10 sec past.
-            
-        - Elapsed time going to change with pop_front for next internal transition event.*/ 
+        // Elapsed time going to change with pop_front for next internal transition event.
 
 
     }

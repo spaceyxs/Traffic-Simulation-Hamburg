@@ -22,8 +22,7 @@ struct IntersectionState {
 
 #ifndef NO_LOGGING
 std::ostream& operator<<(std::ostream &out, const IntersectionState& state) {
-    return out << "HasCar: " << (state.hasCar ? "Yes" : "No") 
-               << ", Sigma: " << state.sigma;
+    return out << "HasCar: " << (state.hasCar ? "Yes" : "No") ;
 }
 #endif
 
@@ -31,13 +30,13 @@ std::ostream& operator<<(std::ostream &out, const IntersectionState& state) {
 class Intersection : public Atomic<IntersectionState> {
 public:
     Port<Cars> inCar; 
-    Port<Cars> outRoad; 
+    Port<Cars> outCar; 
     Port<LightColor> inColor;
 
     Intersection(const std::string id): 
                  Atomic<IntersectionState>(id, IntersectionState()) {
         inCar = addInPort<Cars>("inCar");
-        outRoad = addOutPort<Cars>("outRoad");
+        outCar = addOutPort<Cars>("outCar");
         inColor = addInPort<LightColor>("inColor");
     }
 
@@ -67,7 +66,7 @@ public:
 
     // Send the car through the single output port
     void output(const IntersectionState& state) const override {
-        outRoad->addMessage(state.currentCar);
+        outCar->addMessage(state.currentCar);
     }
 
     [[nodiscard]] double timeAdvance(const IntersectionState& state) const override {     

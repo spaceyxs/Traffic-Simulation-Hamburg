@@ -9,22 +9,23 @@
 using namespace cadmium;
 
 struct IntersectionCoupled : public Coupled {
-    Port<Cars> nodeIn;
-    Port<Cars> nodeOut;
+    Port<Cars> carIn;
+    Port<Cars> carOut;
 
     IntersectionCoupled(const std::string& id) : Coupled(id) {
         // Ports of the coupled model
         
-        nodeIn = addInPort<Cars>("nodeIn");
-        nodeOut = addOutPort<Cars>("nodeOut");
+        carIn = addInPort<Cars>("carIn");
+        carOut = addOutPort<Cars>("carOut");
 
         // Components
         auto road_1 = addComponent<Road>("road_1", 100.0, 40.0);
+        auto road_2 = addComponent<Road>("road_2", 70.0, 20.0);
         auto light = addComponent<TrafficLight>("traffic_light");
         auto intersection = addComponent<Intersection>("intersection");
 
         // EIC (External Input Coupling): From Boundary to Atomic
-        addCoupling(nodeIn, road_1->carEntrance);
+        addCoupling(carIn, road_1->carEntrance);
        
         // IC: Road finishes travel time -> Car enters Intersection logic
         addCoupling(road_1->carExit, intersection->inCar);
@@ -33,7 +34,9 @@ struct IntersectionCoupled : public Coupled {
         addCoupling(light->outColor, intersection->inColor);
 
         //  EOC (External Output Coupling): From Atomic Logic to Boundary
-        addCoupling(intersection->outRoad, nodeOut);
+        addCoupling(intersection->outCar, road_2->carEntrance);
+
+        addCoupling(road_2->carExit, carOut);
     }
 };
 #endif

@@ -1,0 +1,158 @@
+sep=;
+time;model_id;model_name;port_name;data
+0;2;intersection;;HasCar: No
+0;3;traffic_light;;{color: GREEN}
+0;4;road_2;;{queue_size: 0, sigma: 2.14748e+09}
+0;5;road_1;;{queue_size: 0, sigma: 2.14748e+09}
+0;6;car_gen;;{car_count: 0}
+0;2;intersection;;HasCar: No
+0;3;traffic_light;outColor;2
+0;3;traffic_light;;{color: YELLOW}
+0;5;road_1;;{queue_size: 1, sigma: 9}
+0;6;car_gen;carExit;0
+0;6;car_gen;;{car_count: 1}
+0.153852;5;road_1;;{queue_size: 2, sigma: 8.84615}
+0.153852;6;car_gen;carExit;1
+0.153852;6;car_gen;;{car_count: 2}
+0.823332;5;road_1;;{queue_size: 3, sigma: 8.17667}
+0.823332;6;car_gen;carExit;2
+0.823332;6;car_gen;;{car_count: 3}
+1.09293;5;road_1;;{queue_size: 4, sigma: 7.90707}
+1.09293;6;car_gen;carExit;3
+1.09293;6;car_gen;;{car_count: 4}
+2;2;intersection;;HasCar: No
+2;3;traffic_light;outColor;1
+2;3;traffic_light;;{color: RED}
+2;2;intersection;outCar;0
+2;2;intersection;;HasCar: No
+2;4;road_2;;{queue_size: 1, sigma: 12.6}
+2.33208;5;road_1;;{queue_size: 5, sigma: 6.66792}
+2.33208;6;car_gen;carExit;4
+2.33208;6;car_gen;;{car_count: 5}
+5.3088;5;road_1;;{queue_size: 6, sigma: 3.6912}
+5.3088;6;car_gen;carExit;5
+5.3088;6;car_gen;;{car_count: 6}
+6.10816;5;road_1;;{queue_size: 7, sigma: 2.89184}
+6.10816;6;car_gen;carExit;6
+6.10816;6;car_gen;;{car_count: 7}
+6.14655;5;road_1;;{queue_size: 8, sigma: 2.85345}
+6.14655;6;car_gen;carExit;7
+6.14655;6;car_gen;;{car_count: 8}
+6.96951;5;road_1;;{queue_size: 9, sigma: 2.03049}
+6.96951;6;car_gen;carExit;8
+6.96951;6;car_gen;;{car_count: 9}
+6.97794;5;road_1;;{queue_size: 10, sigma: 2.02206}
+6.97794;6;car_gen;carExit;9
+6.97794;6;car_gen;;{car_count: 10}
+7;2;intersection;;HasCar: No
+7;3;traffic_light;outColor;0
+7;3;traffic_light;;{color: GREEN}
+7.05341;5;road_1;;{queue_size: 11, sigma: 1.94659}
+7.05341;6;car_gen;carExit;10
+7.05341;6;car_gen;;{car_count: 11}
+8.31977;5;road_1;;{queue_size: 12, sigma: 0.680232}
+8.31977;6;car_gen;carExit;11
+8.31977;6;car_gen;;{car_count: 12}
+9;2;intersection;;HasCar: Yes
+9;5;road_1;carExit;0
+9;5;road_1;;{queue_size: 11, sigma: 0.153852}
+9.15385;2;intersection;;HasCar: Yes
+9.15385;5;road_1;carExit;1
+9.15385;5;road_1;;{queue_size: 10, sigma: 0.669479}
+9.82333;2;intersection;;HasCar: Yes
+9.82333;5;road_1;carExit;2
+9.82333;5;road_1;;{queue_size: 9, sigma: 0.269594}
+10.0929;2;intersection;;HasCar: Yes
+10.0929;5;road_1;carExit;3
+10.0929;5;road_1;;{queue_size: 8, sigma: 1.23916}
+11.2276;5;road_1;;{queue_size: 9, sigma: 0.104479}
+11.2276;6;car_gen;carExit;12
+11.2276;6;car_gen;;{car_count: 13}
+11.3321;2;intersection;;HasCar: Yes
+11.3321;5;road_1;carExit;4
+11.3321;5;road_1;;{queue_size: 8, sigma: 2.97671}
+12.0442;5;road_1;;{queue_size: 9, sigma: 2.26464}
+12.0442;6;car_gen;carExit;13
+12.0442;6;car_gen;;{car_count: 14}
+13.2017;5;road_1;;{queue_size: 10, sigma: 1.10709}
+13.2017;6;car_gen;carExit;14
+13.2017;6;car_gen;;{car_count: 15}
+14;2;intersection;;HasCar: Yes
+14;3;traffic_light;outColor;2
+14;3;traffic_light;;{color: YELLOW}
+14;2;intersection;outCar;4
+14;2;intersection;;HasCar: No
+14;4;road_2;;{queue_size: 2, sigma: 0.6}
+14.3088;2;intersection;;HasCar: Yes
+14.3088;5;road_1;carExit;5
+14.3088;5;road_1;;{queue_size: 9, sigma: 0.799368}
+14.3088;2;intersection;outCar;5
+14.3088;2;intersection;;HasCar: No
+14.3088;4;road_2;;{queue_size: 3, sigma: 0.291205}
+14.5195;5;road_1;;{queue_size: 10, sigma: 0.588698}
+14.5195;6;car_gen;carExit;15
+14.5195;6;car_gen;;{car_count: 16}
+14.6;4;road_2;carExit;0
+14.6;4;road_2;;{queue_size: 2, sigma: 12}
+15.1082;2;intersection;;HasCar: Yes
+15.1082;5;road_1;carExit;6
+15.1082;5;road_1;;{queue_size: 9, sigma: 0.0383824}
+15.1082;2;intersection;outCar;6
+15.1082;2;intersection;;HasCar: No
+15.1082;4;road_2;;{queue_size: 3, sigma: 11.4918}
+15.1465;2;intersection;;HasCar: Yes
+15.1465;5;road_1;carExit;7
+15.1465;5;road_1;;{queue_size: 8, sigma: 0.822965}
+15.1465;2;intersection;outCar;7
+15.1465;2;intersection;;HasCar: No
+15.1465;4;road_2;;{queue_size: 4, sigma: 11.4535}
+15.9695;2;intersection;;HasCar: Yes
+15.9695;5;road_1;carExit;8
+15.9695;5;road_1;;{queue_size: 7, sigma: 0.00843051}
+15.9695;2;intersection;outCar;8
+15.9695;2;intersection;;HasCar: No
+15.9695;4;road_2;;{queue_size: 5, sigma: 10.6305}
+15.9779;2;intersection;;HasCar: Yes
+15.9779;5;road_1;carExit;9
+15.9779;5;road_1;;{queue_size: 6, sigma: 0.0754702}
+15.9779;2;intersection;outCar;9
+15.9779;2;intersection;;HasCar: No
+15.9779;4;road_2;;{queue_size: 6, sigma: 10.6221}
+16;2;intersection;;HasCar: No
+16;3;traffic_light;outColor;1
+16;3;traffic_light;;{color: RED}
+16;2;intersection;outCar;9
+16;2;intersection;;HasCar: No
+16;4;road_2;;{queue_size: 7, sigma: 10.6}
+16.0534;2;intersection;;HasCar: Yes
+16.0534;5;road_1;carExit;10
+16.0534;5;road_1;;{queue_size: 5, sigma: 1.26636}
+16.0534;2;intersection;outCar;10
+16.0534;2;intersection;;HasCar: No
+16.0534;4;road_2;;{queue_size: 8, sigma: 10.5466}
+16.0864;5;road_1;;{queue_size: 6, sigma: 1.23341}
+16.0864;6;car_gen;carExit;16
+16.0864;6;car_gen;;{car_count: 17}
+16.1394;5;road_1;;{queue_size: 7, sigma: 1.18036}
+16.1394;6;car_gen;carExit;17
+16.1394;6;car_gen;;{car_count: 18}
+16.5734;5;road_1;;{queue_size: 8, sigma: 0.746349}
+16.5734;6;car_gen;carExit;18
+16.5734;6;car_gen;;{car_count: 19}
+17.3198;2;intersection;;HasCar: Yes
+17.3198;5;road_1;carExit;11
+17.3198;5;road_1;;{queue_size: 7, sigma: 2.90783}
+17.3198;2;intersection;outCar;11
+17.3198;2;intersection;;HasCar: No
+17.3198;4;road_2;;{queue_size: 9, sigma: 9.28023}
+18.1141;5;road_1;;{queue_size: 8, sigma: 2.11352}
+18.1141;6;car_gen;carExit;19
+18.1141;6;car_gen;;{car_count: 20}
+18.6101;5;road_1;;{queue_size: 9, sigma: 1.61753}
+18.6101;6;car_gen;carExit;20
+18.6101;6;car_gen;;{car_count: 21}
+18.6101;2;intersection;;HasCar: No
+18.6101;3;traffic_light;;{color: RED}
+18.6101;4;road_2;;{queue_size: 9, sigma: 9.28023}
+18.6101;5;road_1;;{queue_size: 9, sigma: 1.61753}
+18.6101;6;car_gen;;{car_count: 21}
