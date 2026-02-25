@@ -26,11 +26,11 @@ std::ostream& operator<<(std::ostream &out, const TrafficLightState& state) {
 // Atomic Model: Traffic Light that gives color information to the road model.
 class TrafficLight : public Atomic<TrafficLightState> {
 public:
-    Port<LightColor> out_color;
+    Port<LightColor> outColor;
 
     TrafficLight(const std::string& id)
         : Atomic<TrafficLightState>(id, TrafficLightState()) {
-        out_color = addOutPort<LightColor>("out_color");
+        outColor = addOutPort<LightColor>("outColor");
     }
 
     void internalTransition(TrafficLightState& state) const override {
@@ -50,7 +50,7 @@ public:
 	void externalTransition(TrafficLightState& state, double e) const override {}
     
     void output(const TrafficLightState& state) const override {
-        out_color->addMessage(LightColor(state.color));
+        outColor->addMessage(LightColor(state.color));
     }
 
     [[nodiscard]] double timeAdvance(const TrafficLightState& state) const override {  

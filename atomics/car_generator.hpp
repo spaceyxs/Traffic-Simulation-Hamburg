@@ -30,11 +30,11 @@ std::ostream& operator<<(std::ostream &out, const GeneratorState& state) {
 // Atomic Model: Car Generator that creates car with exponential distribution.
 class CarGenerator : public Atomic<GeneratorState> {
 public:
-    Port<Cars> car_exit;
+    Port<Cars> carExit;
 
     CarGenerator(const std::string& id, double lambda)
         : Atomic<GeneratorState>(id, GeneratorState(lambda)) {
-        car_exit = addOutPort<Cars>("car_exit");
+        carExit = addOutPort<Cars>("carExit");
     }
 
     void internalTransition(GeneratorState& state) const override {
@@ -46,7 +46,7 @@ public:
 	void externalTransition(GeneratorState& state, double e) const override {}
     
     void output(const GeneratorState& state) const override {
-        car_exit->addMessage(Cars(state.count));
+        carExit->addMessage(Cars(state.count));
     }
 
     [[nodiscard]] double timeAdvance(const GeneratorState& state) const override {     

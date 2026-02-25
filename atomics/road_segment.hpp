@@ -32,15 +32,14 @@ std::ostream& operator<<(std::ostream &out, const RoadState& state) {
 // Atomic model: Road model that use OD data.
 class Road : public Atomic<RoadState> {
 public:
-    Port<Cars> car_entrance, car_exit;
-    Port<LightColor> in_color;
+    Port<Cars> carEntrance, carExit;
     //std::string originId; // intersection car init
     //std::string destId;
 
     Road(const std::string id, int length, int speedLimit) : 
         Atomic<RoadState>(id, RoadState()) {
-        car_entrance = addInPort<Cars>("car_entrance");
-        car_exit = addOutPort<Cars>("car_exit");
+        carEntrance = addInPort<Cars>("carEntrance");
+        carExit = addOutPort<Cars>("carExit");
 
         state.length = length; 
         state.speedLimit = speedLimit;
@@ -98,8 +97,8 @@ public:
         double TravelTime = minutes * 60;
 
 
-        if (!car_entrance->getBag().empty()) {
-            Cars c = car_entrance->getBag().back();
+        if (!carEntrance->getBag().empty()) {
+            Cars c = carEntrance->getBag().back();
             state.CarsOnRoad.push_back(c);   // add vehicle to road queue
         }
 
@@ -111,7 +110,7 @@ public:
     
     void output(const RoadState& state) const override {
          if (!state.CarsOnRoad.empty()) {
-            car_exit->addMessage(state.CarsOnRoad.front());
+            carExit->addMessage(state.CarsOnRoad.front());
         }
     }
 
