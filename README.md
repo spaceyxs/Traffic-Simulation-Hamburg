@@ -65,7 +65,9 @@ The project evaluated two scenarios to determine the effect of traffic volume on
 **Framework**: Cadmium DEVS 
 
 **To Run**: 
-make all 
+
+In Treminal:<br>
+make all<br>
 ./bin/traffic_sim
 
 **Language**: C++ 
