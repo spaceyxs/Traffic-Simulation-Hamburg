@@ -66,10 +66,12 @@ The project evaluated two scenarios to determine the effect of traffic volume on
 
 **To Run**: 
 
-In Treminal:<br>
-make all<br>
-./bin/traffic_sim
+In the terminal
 
+```bash
+make all
+./bin/traffic_sim
+```
 **Language**: C++ 
 
 **Data Source**: [Transparenzportal Hamburg](https://suche.transparenz.hamburg.de/dataset/verkehrsmengen-auf-hauptverkehrsstrassen-in-hamburg45) 
