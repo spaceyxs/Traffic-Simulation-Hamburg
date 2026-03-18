@@ -62,7 +62,11 @@ The project evaluated two scenarios to determine the effect of traffic volume on
 
 ## Technical Specifications
 
-**Framework**: Cadmium DEVS
+**Framework**: Cadmium DEVS 
+
+**To Run**: 
+make all 
+./bin/traffic_sim
 
 **Language**: C++ 
 
