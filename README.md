@@ -69,7 +69,7 @@ The project evaluated two scenarios to determine the effect of traffic volume on
 In the terminal
 
 ```bash
-source buıld_sim.sh
+source build_sim.sh
 ./bin/traffic_sim
 ```
 
