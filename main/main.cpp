@@ -1,5 +1,5 @@
 #include <iostream>
-#include "top.hpp"
+#include "include/top.hpp"
 #include <string>
 #include <cadmium/lib/iestream.hpp>
 #include "cadmium/simulation/root_coordinator.hpp"

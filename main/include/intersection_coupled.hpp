@@ -2,9 +2,9 @@
 #define INTERSECTION_COUPLED_HPP
 
 #include "cadmium/modeling/devs/coupled.hpp"
-#include "../atomics/intersection.hpp"
-#include "../atomics/traffic_light.hpp"
-#include "../atomics/road_segment.hpp"
+#include "atomics/intersection.hpp"
+#include "atomics/traffic_light.hpp"
+#include "atomics/road_segment.hpp"
 
 using namespace cadmium;
 

@@ -4,7 +4,7 @@
 #include <string>
 #include <memory>
 #include "cadmium/modeling/devs/coupled.hpp"
-#include "../atomics/car_generator.hpp"
+#include "atomics/car_generator.hpp"
 #include "intersection_coupled.hpp"
 using namespace cadmium;
 

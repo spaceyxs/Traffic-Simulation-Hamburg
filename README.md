@@ -69,9 +69,12 @@ The project evaluated two scenarios to determine the effect of traffic volume on
 In the terminal
 
 ```bash
-make all
+source buıld_sim.sh
 ./bin/traffic_sim
 ```
+
+_NOTE: Output file can be found in the test directory_
+
 **Language**: C++ 
 
 **Data Source**: [Transparenzportal Hamburg](https://suche.transparenz.hamburg.de/dataset/verkehrsmengen-auf-hauptverkehrsstrassen-in-hamburg45) 
